@@ -1,5 +1,4 @@
 import aberturas.*
-import cliente.*
 
 describe "aberturas" {
 	
@@ -15,7 +14,7 @@ describe "aberturas" {
 
 	// TODO: construir un cliente de nombre Jose 
 
-	
+/*	
 	method initialize(){
 	   // TODO: configurar lo necesario, como por ejemplo si se necesita establecer para algun test que determinado cliente se ha interesado en ...
 	}
@@ -103,3 +102,5 @@ describe "aberturas" {
 
 	}
 }
+* 
+*/

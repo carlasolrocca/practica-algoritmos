@@ -1,0 +1,105 @@
+import aberturas.*
+import cliente.*
+
+describe "aberturas" {
+	
+	// TODO: Construir/configurar una ventana rectangular de 1,50m x 1m 
+
+	// TODO: Construir/configurar una ventana redonda de 0,3m de radio
+
+	// TODO: Construir una puerta de 0,90m x 2,03m
+
+	// TODO: Construir una porton de 2,03m x 6m
+
+	// TODO: construir una clienta de nombre Telma 
+
+	// TODO: construir un cliente de nombre Jose 
+
+	
+	method initialize(){
+	   // TODO: configurar lo necesario, como por ejemplo si se necesita establecer para algun test que determinado cliente se ha interesado en ...
+	}
+	
+	test "costo de la puerta" {
+		//TODO: verificar que el costo de la puerta es 22379.50
+		
+	}
+	
+	test "costo de ventana rectangular" {
+	    //TODO: verificar que el costo de la ventana rectangular sea 15250
+	    
+	    
+	} 
+	
+ 	
+	test "costo de ventana redonda" {
+	    //TODO: verificar que el costo de la ventana redonda sea 4903.29
+	    
+	} 
+
+ 	test "precio venta" {
+		//TODO: verificar que el precio de venta de la puerta es 29093.35
+		
+		//TODO: verificiar que el precio de venta de la ventana rectangular es 19062.50
+		
+		//TODO verificar que el precio de venta de la ventana redonda es 5516.20125
+		
+	}
+	
+	
+
+ 	test "posibilidad de envios" {
+		//TODO: verificar que el envio de la puerta es posible
+		
+		//TODO: verificiar que el envio de la ventana rectangular es posible
+		
+		//TODO verificar que el envio de la ventana redonda es posible
+		
+		//TODO verificar que el envio del porton NO ES POSIBLE
+		
+	}
+	
+
+ 	test "costo envios" {
+		//TODO: verificar que el costo de envio de la puerta es 11813.75
+		
+		//TODO: verificiar que el costo de envio de la ventana rectangular 10687.50
+		
+		//TODO verificar que el costo de envio de la ventana redonda es 8775
+		//La consola da error al valor 8775, espera el valor 10687.5
+		
+		//TODO al verificar el costo de envio del porton que NO SE PUEDE ENVIAR, genera excepción
+		
+	}
+	
+	
+	test "La abertura es competitiva o no competitiva"{
+	
+	}
+	
+	test "Relación precio de venta y superficie (RPVS)"{
+
+	}
+		
+	test "Cliente normal con interes en 2 aberturas"{
+
+	}
+	
+	
+	test "Cliente normal a Cliente prioritario"{
+
+	}
+	
+	test "Potenciabilidad del cliente"{
+
+	}
+	
+	
+	test "Nuevo cliente"{
+
+	}
+
+	test "Potencial Cliente"{
+
+	}
+}

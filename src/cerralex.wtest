@@ -3,50 +3,53 @@ import aberturas.*
 describe "aberturas" {
 	
 	// TODO: Construir/configurar una ventana rectangular de 1,50m x 1m 
-
+	const ventanaRec= new VentanaRectangular(alto= 1.50, ancho= 1)
 	// TODO: Construir/configurar una ventana redonda de 0,3m de radio
-
+	const ventanaCirc= new VentanaRedonda(radio= 0.3, alto= 0, ancho= 0)
 	// TODO: Construir una puerta de 0,90m x 2,03m
+	const puerta = new Puerta(alto= 0.90, ancho= 2.03)
 
 	// TODO: Construir una porton de 2,03m x 6m
+	const porton= new Porton(alto= 2.03, ancho= 6)
 
 	// TODO: construir una clienta de nombre Telma 
+	const telma = new Cliente()
 
 	// TODO: construir un cliente de nombre Jose 
+	const jose = new Cliente()
 
-/*	
+	const francisco= new Cliente()
+	
 	method initialize(){
 	   // TODO: configurar lo necesario, como por ejemplo si se necesita establecer para algun test que determinado cliente se ha interesado en ...
 	}
 	
 	test "costo de la puerta" {
 		//TODO: verificar que el costo de la puerta es 22379.50
-		
+		assert.equals(22379.50, puerta.precioCosto())
 	}
 	
 	test "costo de ventana rectangular" {
 	    //TODO: verificar que el costo de la ventana rectangular sea 15250
-	    
-	    
-	} 
-	
+	    assert.equals(15250, ventanaRec.precioCosto())
+	}
  	
 	test "costo de ventana redonda" {
 	    //TODO: verificar que el costo de la ventana redonda sea 4903.29
-	    
+	    assert.equals(4903.29, ventanaCirc.precioCosto()) 
 	} 
 
  	test "precio venta" {
 		//TODO: verificar que el precio de venta de la puerta es 29093.35
-		
+		assert.equals(29093.35, puerta.precioVenta())
 		//TODO: verificiar que el precio de venta de la ventana rectangular es 19062.50
-		
+		assert.equals(19062.50, ventanaRec.precioVenta())
 		//TODO verificar que el precio de venta de la ventana redonda es 5516.20125
-		
+		assert.equals(5516.20125, ventanaCirc.precioVenta())
 	}
 	
 	
-
+/*
  	test "posibilidad de envios" {
 		//TODO: verificar que el envio de la puerta es posible
 		

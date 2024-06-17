@@ -23,7 +23,7 @@ class Abertura{
 		if(self.sePuedeEnviar()){
 			return valorMinimo + self.calculoParaCadaAbertura()
 		}else{
-			throw new Exception(message= "No se puede enviar este articulo")
+			return throw new Exception(message= "No se puede enviar este articulo")
 		}
 	}
 	
@@ -64,7 +64,7 @@ class VentanaRedonda inherits VentanaRectangular(accesorio= herrajes, competitiv
 	override method mm()= return diametro
 }
 
-class Puerta inherits Abertura(accesorio= cerradura, porcentajeGanancia= 0.30){}
+class Puerta inherits VentanaRectangular(accesorio= cerradura, porcentajeGanancia= 0.30){}
 
 class Porton inherits Puerta(accesorio= accesorioPorton){}
 

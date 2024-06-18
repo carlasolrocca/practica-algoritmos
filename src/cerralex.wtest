@@ -1,4 +1,5 @@
 import aberturas.*
+import clientes.*
 
 describe "aberturas" {
 	
@@ -17,8 +18,11 @@ describe "aberturas" {
 
 	// TODO: construir un cliente de nombre Jose 
 	const jose = new Cliente()
-
-	const francisco= new Cliente()
+	
+	//cliente prioritario
+	const francisco= new Cliente(aberturasDeInteres= [puerta, ventanaCirc])
+	
+	const cerralex = new Comercializadora(clientes=[francisco, jose])
 	
 	method initialize(){
 	   // TODO: configurar lo necesario, como por ejemplo si se necesita establecer para algun test que determinado cliente se ha interesado en ...
@@ -48,55 +52,75 @@ describe "aberturas" {
 		assert.equals(5516.20125, ventanaCirc.precioVenta())
 	}
 	
-	
-/*
+
  	test "posibilidad de envios" {
 		//TODO: verificar que el envio de la puerta es posible
-		
+		assert.that(puerta.sePuedeEnviar())
 		//TODO: verificiar que el envio de la ventana rectangular es posible
-		
+		assert.that(ventanaRec.sePuedeEnviar())
 		//TODO verificar que el envio de la ventana redonda es posible
-		
+		assert.that(ventanaCirc.sePuedeEnviar())
 		//TODO verificar que el envio del porton NO ES POSIBLE
-		
+		assert.that(porton.sePuedeEnviar())
 	}
 	
 
  	test "costo envios" {
 		//TODO: verificar que el costo de envio de la puerta es 11813.75
-		
+		assert.equals(11813.75, puerta.costoEnvio())
 		//TODO: verificiar que el costo de envio de la ventana rectangular 10687.50
-		
+		assert.equals(10687.50, ventanaRec.costoEnvio())
 		//TODO verificar que el costo de envio de la ventana redonda es 8775
+		assert.throwsExceptionWithMessage("No se puede enviar esa abertura", {ventanaCirc.costoEnvio()})
 		//La consola da error al valor 8775, espera el valor 10687.5
 		
 		//TODO al verificar el costo de envio del porton que NO SE PUEDE ENVIAR, genera excepción
 		
 	}
-	
-	
+
 	test "La abertura es competitiva o no competitiva"{
-	
+		assert.that(ventanaCirc.competitiva())
+		assert.notThat(ventanaRec.competitiva())
+		assert.notThat(porton.competitiva())
+		assert.notThat(puerta.ecompetitiva())
 	}
 	
 	test "Relación precio de venta y superficie (RPVS)"{
-
+		//precio venta rectangular: 19062.50  SUP= 1.5
+		//precio venta circular: 5516.20125   RADIO= 0.3 > SUP= 0,2826
+		//precio venta puerta: 29093.35      SUP= 1.827
+		assert.equals(12708.3333, ventanaRec.RPVS())
+		assert.equals(15924.1106, puerta.RPVS())
+		assert.equals(19519.4666, ventanaCirc.RPVS())
 	}
 		
 	test "Cliente normal con interes en 2 aberturas"{
-
+		telma.seInteresoEn(puerta)
+		telma.seInteresoEn(ventanaCirc)
+		assert.equals(normal, telma.tipo())	
+		assert.equals(2, telma.cantidadAberturas())
 	}
 	
-	
 	test "Cliente normal a Cliente prioritario"{
-
+		assert.equals(normal, francisco.tipo())
+		francisco.seInteresoEn(ventanaRec)
+		assert.equals(prioritario, francisco.tipo())
+		assert.equals(3, francisco.cantidadAberturas())
 	}
 	
 	test "Potenciabilidad del cliente"{
-
+		francisco.seInteresoEn(puerta)
+		francisco.seInteresoEn(ventanaRec)
+		francisco.seInteresoEn(ventanaCirc)
+		
+		jose.seInteresoEn(puerta)
+		jose.seInteresoEn(ventanaCirc)
+		
+		assert.equals(53.672,05125, francisco.potencialidadVenta())
+		assert.equals([puerta, ventanaRec, ventanaCirc], francisco.aberturasDeInteres())
 	}
 	
-	
+/*	
 	test "Nuevo cliente"{
 
 	}

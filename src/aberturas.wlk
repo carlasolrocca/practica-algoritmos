@@ -1,8 +1,5 @@
-/** completar las clases y objetos */
-
-class Comercializadora{
-	var property clientes= []
-}
+import clientes.*
+import comercializadora.*
 
 class Abertura{
 	const cmc = 8500 						//costo por metro cuadrado
@@ -82,33 +79,3 @@ object accesorioPorton{
 	var property valor= 25650
 }
 //------------------------
-
-class Cliente{
-	var property aberturasDeInteres = []
-	var property tipo = normal //x default supongo (?)
-	
-	method cambiaTipo(){
-		if(aberturasDeInteres.size() > 3){
-			tipo= prioritario
-		}
-	}
-	
-	method seInteresoEn(abertura)= aberturasDeInteres.add(abertura)
-	
-	method cantidadInteres()= return aberturasDeInteres.size()
-
-}
-
-class TipoCliente{}
-
-const normal = new TipoCliente()
-const prioritario = new TipoCliente()
-
-
-
-
-
-
-
-
-
